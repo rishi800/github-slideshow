@@ -1,0 +1,405 @@
+//1. wap to read a string from user and display it's reverse.
+
+import javax.swing.*;
+class Demo
+{
+	public static void main(String args[])
+		{
+			String a;
+			a=JOptionPane.showInputDialog("enter string ");
+			StringBuffer b=new StringBuffer(a);
+			b.reverse();
+			System.out.println("old = "+a);
+			System.out.println("new = "+b);	
+
+		}
+}
+//___________________________________________________________________________________
+
+//Q2. wap to read two no from user and swap thier values without using third variable.
+
+import javax.swing.*;
+class Demo
+{
+	public static void main(String args[])
+		{
+
+			int a=20,b=10;
+			System.out.println("old a = "+a);
+			System.out.println("old b = "+b);
+			a=a+b;
+			b=a-b;
+			a=a-b;
+			System.out.println("new a = "+a);
+			System.out.println("new b = "+b);
+		}	
+}
+
+//_______________________________________________________________________________________________
+
+//3.Write a Java program to check if a vowel is present in a string.
+
+import javax.swing.*;
+class Demo
+{
+	public static void main(String args[])
+		{
+			String a;
+			char b;
+			int flag=0;
+			a=JOptionPane.showInputDialog("enter string");
+			int len=a.length();
+			for(int i=0;i<len;i++)
+				{
+					b=a.charAt(i);
+				
+					if(b=='a' || b=='e' || b=='i' || b=='o'|| b=='u' ||b=='A' || b=='E' || b=='I' || b=='O'|| b=='U')
+						{
+
+							flag=1;
+							break;
+						}
+				}
+			if(flag==1)
+				{
+
+					System.out.println("all character vowel is present in a string");
+
+				}
+			else
+				{
+
+					System.out.println("all character consonent is present in a string");
+
+				}
+
+
+		}
+
+}
+
+//___________________________________________________________________
+
+//4. Write a Java program to check if the given number is a prime number.
+
+import javax.swing.*;
+class Demo
+{
+	public static void main(String args[])
+		{
+			int num,i,flag=0;
+			num=Integer.parseInt(JOptionPane.showInputDialog("enter number"));
+			for(i=2;i<num;i++)
+				{
+					if(num%i==0)
+						{
+
+							flag=1;
+							break;
+						}
+				}
+			if(flag==1)
+				{
+
+					System.out.println(num+"is not a prime no");
+
+				}
+			else
+				{
+
+					System.out.println(num+"is a prime no");
+
+
+				}
+
+
+		}
+
+
+}
+
+//________________________________________________________________________
+
+
+
+//Q5. wap to calculate area of circle.
+
+import javax.swing.*;
+class Demo
+{
+	public static void main(String args[])
+		{
+			
+			final double pi=3.14;
+			double area;
+			int r=Integer.parseInt(JOptionPane.showInputDialog("enter radious"));
+			area=pi*r*r;
+			System.out.println("area of circle = "+area);
+			
+
+		}
+
+}
+
+//_____________________________________________________________________
+
+
+//Q6. wap to read three numbers from user and display the max no.
+
+import javax.swing.*;
+class Demo
+{
+	public static void main(String args[])
+		{
+			int a,b,c;
+			a=Integer.parseInt(JOptionPane.showInputDialog("enter 1st value"));
+			b=Integer.parseInt(JOptionPane.showInputDialog("enter 2nd value"));
+			c=Integer.parseInt(JOptionPane.showInputDialog("enter 3d value"));
+
+			if(a>b && a>c)
+				{
+	
+					System.out.println(a+" is max no");
+			
+				}
+			else if(b>a && b>c)
+				{
+					System.out.println(b+" is max no");
+				}
+			else if(c>a && c>b)
+				{
+					System.out.println(c+" is max no");
+				}
+			else
+				{
+
+					System.out.println("equal");
+				}
+
+		}
+
+}
+
+
+//___________________________________________________________________________________
+
+//Q7. Write a program to read roll no, name and marks of three subjects and calculate the total, percentage and division. 
+
+import javax.swing.*;
+class Demo
+{
+	public static void main(String args[])
+		{
+			int roll,math,chem,phy,div;
+			String name;
+			double total,per;
+			
+			roll=Integer.parseInt(JOptionPane.showInputDialog("enter roll no"));
+			name=JOptionPane.showInputDialog("enter name");
+			math=Integer.parseInt(JOptionPane.showInputDialog("enter math. marks"));
+			chem=Integer.parseInt(JOptionPane.showInputDialog("enter chem. marks"));
+			phy=Integer.parseInt(JOptionPane.showInputDialog("enter phy. marks"));
+			
+			total=math+chem+phy;
+			per=total/3;
+
+			System.out.println("roll no = "+roll);			
+			System.out.println("name = "+name);			
+			System.out.println("math. marks = "+math);			
+			System.out.println("chem. marks = "+chem);			
+			System.out.println("phy. marks  = "+phy);			
+			System.out.println("total = "+total);
+			System.out.println("perchantage = "+per);
+			
+			
+			if(per>=60 && per<=100)
+				{
+					System.out.println("pass by: 1st division");
+				}
+			else if(per>=45 && per<=59)
+				{
+					System.out.println("pass by: 2nd division");
+				}
+			else if(per>=36 && per<=44)
+				{
+					System.out.println("pass by: 3d division");
+				}
+			else
+				{
+					System.out.println("fail");
+
+				}								
+
+		}
+
+}
+
+
+//_____________________________________________________________________________________________________________________
+
+//Q8. wap to print all prime no between 1 to 100.
+
+import javax.swing.*;
+class Demo
+{
+	public static void main(String args[])
+		{
+			int i,j,r=0;
+			for(i=1;i<=100;i++)
+				{
+					for(j=2;j<i;j++)
+						{
+							if(i%j==0)
+							    {
+
+								r=i;
+								break;
+							    }
+
+						}
+					if(r==i || i==1)
+						{
+
+							System.out.println(i+"is not a prime no");
+
+						}
+					else
+						{
+							System.out.println(i+"is a prime no");
+
+						}
+		
+				}
+			
+
+		}
+
+}
+
+//_________________________________________________________________________________________________________
+
+//Q9. wap to print all perfect no between 1 to 100.
+
+import javax.swing.*;
+class Demo
+{
+	public static void main(String args[])
+		{
+			int i,j,sum=0;
+			for(i=1;i<=100;i++)
+				{	sum=0;
+					for(j=1;j<=i/2;j++)
+						{
+							if(i%j==0)
+							    {
+									
+								sum=sum+j;
+								
+							    }
+
+						}
+					if(sum==i)
+						{
+
+							System.out.println(i+"is perfect no");
+
+						}
+					else
+						{
+							System.out.println(i+"is a not perfect no");
+
+						}
+		
+				}
+			
+
+		}
+
+}
+
+
+//______________________________________________________________________________________________________
+
+//Q10. wap to print full pyramid pattern:
+
+//	           1
+//	        3 2 1
+//                    5 4 3 2 1
+//	  7 6 5 4 3 2 1
+//              9 8 7 6 5 4 3 2 1
+
+import javax.swing.*;
+class Demo
+{
+		public static void main(String args[])
+			{
+				int i,j;
+				for(i=1;i<=5;i++)
+					{
+						for(j=5;j>=i;j--)
+							{
+								System.out.print(" ");
+
+							}
+						for(int l=i*2-1;l>=1;l--)
+							{
+								System.out.print(l);
+
+							
+							}
+						System.out.println();
+				
+					}
+	
+
+			}
+
+}
+
+
+//_____________________________________________________________________________
+
+/* Q18. wap to create a class Student with following data members:
+1. rollno	2. name	3.phy	4.chem	5. math	6.total	7.per
+create following methods:
+1. getData()
+2. showData()
+3. calculateResult() */
+import javax.swing.*;
+class Student
+{
+    private int rno,py,chem,math,tot;
+    private double per;
+    private String nm;
+    public void get_Data()
+    {
+        rno=Integer.parseInt(JOptionPane.showInputDialog("Enter your RollNO: "));
+        JOptionPane.showInputDialog("Enter Your Name");
+        py=Integer.parseInt(JOptionPane.showInputDialog("Enter your Phy : "));
+        chem=Integer.parseInt(JOptionPane.showInputDialog("Enter your CHEM : "));
+        math=Integer.parseInt(JOptionPane.showInputDialog("Enter your MATH : "));
+    }
+    public void show_Data()
+    {
+        System.out.println("Roll No.:"+rno);
+        System.out.println("Name:"+nm);
+        System.out.println("Pyh:"+py);
+        System.out.println("Chem:"+chem);
+        System.out.println("Math:"+math);
+        System.out.println("Total:"+tot);
+        System.out.println("Percent:"+per);
+    }
+    public void cal()
+    {
+        tot=chem+py+math;
+        per=tot*100/300;
+    }
+}
+public class Q18 {
+    public static void main(String[] args) {
+        Student st=new Student();
+        st.get_Data();
+        st.cal();
+        st.show_Data();
+    }
+}
